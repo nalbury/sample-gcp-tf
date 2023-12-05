@@ -3,6 +3,9 @@ resource "google_storage_bucket" "auto-expire" {
   project       = "pizzakube"
   location      = "US"
   force_destroy = true
+  autoclass {
+    enabled = true
+  }
 
   public_access_prevention = "enforced"
 }
